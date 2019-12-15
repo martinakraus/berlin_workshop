@@ -1,7 +1,5 @@
 <div>
   <h2>{{ book.title }}</h2>
   <div>{{ book.subtitle }}</div>
-  <button (click)="setHeader(book.isbn)">Set Header</button>
   <button [routerLink]="['/books', book.isbn ]">View Detail</button>
-  <button [routerLink]="['/books', book.isbn, 'edit' ]">Edit</button>
 </div>

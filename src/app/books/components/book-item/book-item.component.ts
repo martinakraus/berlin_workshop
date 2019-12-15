@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../../models/book';
-import { HeaderService } from '../../../shared/services/header.service';
 
 @Component({
   selector: 'app-book-item',
@@ -10,12 +9,8 @@ import { HeaderService } from '../../../shared/services/header.service';
 export class BookItemComponent implements OnInit {
   @Input() book: Book;
 
-  constructor(private readonly headerService: HeaderService) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  setHeader(isbn: string) {
-    this.headerService.setHeader(isbn);
   }
 }
