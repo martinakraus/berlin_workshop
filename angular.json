@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/book-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -54,6 +55,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -136,5 +141,8 @@
       }
     }
   },
-  "defaultProject": "book-app"
+  "defaultProject": "book-app",
+  "cli": {
+    "analytics": "0ef3c384-8f71-456b-8cdb-3619ed4cd744"
+  }
 }
