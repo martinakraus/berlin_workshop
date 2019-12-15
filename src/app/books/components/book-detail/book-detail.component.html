@@ -1,0 +1,5 @@
+<button routerLink="/books">Back</button>
+<div *ngIf="(book$ | async) as book">
+  {{ book | json }}
+  <button routerLink="/books/new">New Book</button>
+</div>
